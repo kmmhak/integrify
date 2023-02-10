@@ -4,19 +4,15 @@ import Search from './Search';
  function Navbar({setSearchWord}) {
 
     return (
-
             <div className='navbar'>
                 <div className='menuIcon'>
-                <FaIcons.FaBars />
+                <FaIcons.FaBars style={{ color: "#fff" }}/>
                 </div>
                 <h3 className='navBarTitle'>
                     Country
                 </h3>
                 <Search setSearchWord={setSearchWord} />
             </div>
-            
-
- 
     )
  }
 

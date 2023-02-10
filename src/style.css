@@ -3,13 +3,20 @@
   height: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+}
 
+.navBarTitle {
+  color: white;
+  margin-right: 40px;
 }
 
 .menuIcon {
-  padding: 1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 span  {
@@ -22,9 +29,37 @@ span  {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   
 }
 
+.pagination_item {
+  margin-left: 10px;
+}
+
 .search {
-  padding: 10 px;
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search_container {
+  padding: 8px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 5px;
+  display: flex;
+
+  justify-content: flex-end;
+
+}
+
+input {
+  border-style: none;
+}
+
+button {
+  border-style: none;
+  background-color: transparent
 }
