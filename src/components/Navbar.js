@@ -1,5 +1,5 @@
 import * as FaIcons from "react-icons/fa";
-import Search from './Search'
+import Search from './Search';
 
  function Navbar({setSearchWord}) {
 
