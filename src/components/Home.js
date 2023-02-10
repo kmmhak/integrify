@@ -7,9 +7,10 @@ const Home = () => {
 
     const [countries, setCountries] = useState([]);
     const [fetchComplete, setfetchComplete] = useState(false)
+    const [searchWord, setSearchWord] = useState(null);
+    const [filtered, setFiltered] = useState(null);
 
     useEffect(() => {
-
     axios
         .get(`https://restcountries.com/v3.1/all`)
         .then(function (response) {
@@ -43,13 +44,27 @@ const Home = () => {
             console.log(error);
         });
     }, []);
-  
+
+    useEffect(() => {
+        if(searchWord !== null) {
+            const filtered = countries.filter( item => {
+                const lowerCaseSearchWord = searchWord.toLowerCase();
+                const lowerCaseCountry = item.name.toLowerCase();
+                return lowerCaseCountry.includes(lowerCaseSearchWord)
+            })
+            setFiltered(filtered)
+        }
+        
+        
+    }, [searchWord, countries])
+ 
+  console.log(filtered)
     if (fetchComplete) { 
         return (
             <>
-                <Navbar />
+                <Navbar setSearchWord={setSearchWord} />
                 <div className='container'>
-                    <Table countries={countries} />
+                    <Table countries={filtered ? filtered : countries} />
                 </div>
             </>
         )

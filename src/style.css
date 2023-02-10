@@ -1,7 +1,8 @@
 .navbar {
-  background-color: #2b03da;
+  background-color: #467bee;
   height: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
@@ -22,4 +23,8 @@ span  {
   flex-direction: row;
   justify-content: flex-end;
   
+}
+
+.search {
+  padding: 10 px;
 }

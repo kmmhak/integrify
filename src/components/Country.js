@@ -26,9 +26,6 @@ const Country = () => {
 
     }, [countryName])
 
-
-    console.log(data);
-
     if(fetchComplete) {
         return (
             <div className='container'>

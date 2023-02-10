@@ -1,11 +1,10 @@
-import { IconContext } from "react-icons";
 import * as FaIcons from "react-icons/fa";
+import Search from './Search'
 
- function Navbar() {
+ function Navbar({setSearchWord}) {
 
     return (
-        <>
-        <IconContext.Provider value={{ color: "#fff" }}>
+
             <div className='navbar'>
                 <div className='menuIcon'>
                 <FaIcons.FaBars />
@@ -13,9 +12,11 @@ import * as FaIcons from "react-icons/fa";
                 <h3 className='navBarTitle'>
                     Country
                 </h3>
+                <Search setSearchWord={setSearchWord} />
             </div>
-        </IconContext.Provider>
-        </>
+            
+
+ 
     )
  }
 
