@@ -58,7 +58,6 @@ const Home = () => {
         
     }, [searchWord, countries])
  
-  console.log(filtered)
     if (fetchComplete) { 
         return (
             <>

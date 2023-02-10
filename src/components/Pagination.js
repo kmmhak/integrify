@@ -14,8 +14,8 @@ const Pagination = ({
 
     return(
         <div className='pagination'>
-            <div className='page_size'>
-                Rows per page: 
+            <div className='pagination_item'>
+                Rows per page:{' '} 
                 <select 
                     value={pageSize}
                     onChange={(e) => setPageSize(Number(e.target.value))}
@@ -27,11 +27,11 @@ const Pagination = ({
                     ))}
                 </select>
             </div>
-            <div className='page_number'>
+            <div className='pagination_item'>
                 {pageIndex + 1} - {pageOptions.length}
             </div>
         
-            <div className='page_buttons'>
+            <div className='pagination_item'>
                 <Button 
                     disabled={!canPreviousPage}
                     onClick={previousPage} 
